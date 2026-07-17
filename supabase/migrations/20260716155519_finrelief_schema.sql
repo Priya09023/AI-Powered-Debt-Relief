@@ -161,18 +161,22 @@ CREATE INDEX IF NOT EXISTS idx_ai_history_user_id ON ai_history(user_id);
 CREATE INDEX IF NOT EXISTS idx_ai_history_created ON ai_history(created_at DESC);
 
 -- Auto-update updated_at
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
+-- Security: pin search_path to a trusted schema to prevent search_path hijacking.
+CREATE OR REPLACE FUNCTION public.update_updated_at_column()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SET search_path = pg_catalog, public
+AS $$
 BEGIN
   NEW.updated_at = now();
   RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$$;
 
 DROP TRIGGER IF EXISTS trg_profiles_updated ON profiles;
 CREATE TRIGGER trg_profiles_updated BEFORE UPDATE ON profiles
-  FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+  FOR EACH ROW EXECUTE FUNCTION public.update_updated_at_column();
 
 DROP TRIGGER IF EXISTS trg_loans_updated ON loans;
 CREATE TRIGGER trg_loans_updated BEFORE UPDATE ON loans
-  FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+  FOR EACH ROW EXECUTE FUNCTION public.update_updated_at_column();
