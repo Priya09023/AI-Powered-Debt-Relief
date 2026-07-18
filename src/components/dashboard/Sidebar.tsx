@@ -19,14 +19,14 @@ import { useAuth } from '../../context/AuthContext';
 
 const links = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/loans', label: 'Loans', icon: Landmark },
-  { to: '/financial-profile', label: 'Financial Profile', icon: Wallet },
-  { to: '/settlement-prediction', label: 'Settlement Prediction', icon: Brain },
-  { to: '/negotiation-letter', label: 'Negotiation Letter', icon: Mail },
-  { to: '/ai-history', label: 'AI History', icon: History },
-  { to: '/know-your-rights', label: 'Know Your Rights', icon: BookOpen },
-  { to: '/profile', label: 'Profile', icon: UserCircle },
-  { to: '/settings', label: 'Settings', icon: Settings },
+  { to: '/dashboard/loans', label: 'Loans', icon: Landmark },
+  { to: '/dashboard/financial-profile', label: 'Financial Profile', icon: Wallet },
+  { to: '/dashboard/settlement-prediction', label: 'Settlement Prediction', icon: Brain },
+  { to: '/dashboard/negotiation-letter', label: 'Negotiation Letter', icon: Mail },
+  { to: '/dashboard/ai-history', label: 'AI History', icon: History },
+  { to: '/dashboard/know-your-rights', label: 'Know Your Rights', icon: BookOpen },
+  { to: '/dashboard/profile', label: 'Profile', icon: UserCircle },
+  { to: '/dashboard/settings', label: 'Settings', icon: Settings },
 ];
 
 interface SidebarProps {

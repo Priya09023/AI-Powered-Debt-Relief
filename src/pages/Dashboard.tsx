@@ -114,10 +114,10 @@ export default function Dashboard() {
             Here's your financial recovery snapshot. {m.riskLevel === 'High' ? 'Your risk level is elevated — review recommendations below.' : 'Your finances are on track. Keep it up!'}
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            <Link to="/settlement-prediction" className="btn-primary !py-2.5 text-sm">
+            <Link to="/dashboard/settlement-prediction" className="btn-primary !py-2.5 text-sm">
               <Brain className="w-4 h-4" /> Run AI Prediction
             </Link>
-            <Link to="/negotiation-letter" className="btn-secondary !py-2.5 text-sm">
+            <Link to="/dashboard/negotiation-letter" className="btn-secondary !py-2.5 text-sm">
               <Mail className="w-4 h-4" /> Generate Letter
             </Link>
           </div>
@@ -322,7 +322,7 @@ export default function Dashboard() {
         <div className="card p-6">
           <div className="flex items-center justify-between mb-5">
             <h3 className="font-semibold text-secondary-900 dark:text-white">Settlement Summary</h3>
-            <Link to="/settlement-prediction" className="text-sm text-primary-500 hover:text-primary-400 flex items-center gap-1">
+            <Link to="/dashboard/settlement-prediction" className="text-sm text-primary-500 hover:text-primary-400 flex items-center gap-1">
               View all <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -352,7 +352,7 @@ export default function Dashboard() {
             icon={<Activity className="w-8 h-8" />}
             title="No activity yet"
             description="Start by adding a loan or generating an AI prediction"
-            action={<Link to="/loans" className="btn-primary text-sm">Add Your First Loan</Link>}
+            action={<Link to="/dashboard/loans" className="btn-primary text-sm">Add Your First Loan</Link>}
           />
         ) : (
           <div className="space-y-3">

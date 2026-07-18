@@ -276,7 +276,7 @@ export default function Settings() {
             <FileDown className="w-5 h-5" /> Export Full Report (PDF)
           </button>
           <button
-            onClick={() => navigate('/ai-history')}
+            onClick={() => navigate('/dashboard/ai-history')}
             className="btn-secondary"
           >
             <History className="w-5 h-5" /> View AI History

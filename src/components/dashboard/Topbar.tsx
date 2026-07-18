@@ -31,7 +31,7 @@ export default function Topbar({ onMenuClick, title }: TopbarProps) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (search.trim()) {
-      navigate(`/ai-history?q=${encodeURIComponent(search)}`);
+      navigate(`/dashboard/ai-history?q=${encodeURIComponent(search)}`);
     }
   };
 
@@ -83,7 +83,7 @@ export default function Topbar({ onMenuClick, title }: TopbarProps) {
           </div>
 
           <button
-            onClick={() => navigate('/profile')}
+            onClick={() => navigate('/dashboard/profile')}
             className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-semibold hover:scale-105 transition-transform"
           >
             {(profile?.full_name || 'U').charAt(0).toUpperCase()}

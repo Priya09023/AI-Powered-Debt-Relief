@@ -15,10 +15,10 @@ const sections = [
   {
     title: 'Resources',
     links: [
-      { label: 'Know Your Rights', to: '/know-your-rights' },
+      { label: 'Know Your Rights', to: '/dashboard/know-your-rights' },
       { label: 'FAQ', href: '#faq' },
-      { label: 'AI History', to: '/ai-history' },
-      { label: 'Settlement Prediction', to: '/settlement-prediction' },
+      { label: 'AI History', to: '/dashboard/ai-history' },
+      { label: 'Settlement Prediction', to: '/dashboard/settlement-prediction' },
     ],
   },
   {
