@@ -1,5 +1,9 @@
 # FinRelief AI - AI Powered Debt Relief & Financial Recovery Platform
 
+🌐 Live Demo: https://ai-powered-debt-relief.vercel.app
+
+💻 GitHub Repository: https://github.com/Priya09023/AI-Powered-Debt-Relief
+
 A full-stack fintech application that helps borrowers negotiate loan settlements, predict optimal settlement amounts, and generate professional negotiation letters using AI.
 
 ## Features
